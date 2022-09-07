@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>The W</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --verydarkblue: hsl(226, 43%, 10%);
+      --darkblue: hsl(235, 46%, 20%);
+      --desaturatedblue: hsl(235, 45%, 61%);
+      --paleblue: hsl(236, 100%, 87%);
+      --blue: hsl(246, 80%, 60%)
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .largecard {
+      background-color: var(--darkblue); 
+      width: 300px;
+      height: 530px;
+      border-radius: 10px;
+      grid-area: 'profile';
+    }
+
+    .largecard-over {
+      background-color: var(--blue);
+      width: 280px;
+      height: 350px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .report-for {
+      color: aliceblue;
+      font-family: 'Rubik', sans-serif;
+      margin-bottom: 5px;
+      opacity: 70%;
+      font-weight: 300;
+    }
+
+    .name {
+      color: aliceblue;
+      font-family: 'Rubik', sans-serif;
+      font-size: 60px;
+      margin: 0px;
+      font-weight: 400;
+    }
+
+    .pfp {
+      height: 100px;
+      width: 100px;
+    }
+
+    .largecard-list {
+      width: 260px;
+      height: 120px;
+      background-color: rgba(180, 23, 23, 0);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .list-element {
+      color: grey;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 200;
+      font-size: 20px;
+      margin: 0px;
+    }
+
+    .list-element:hover {
+      color: aliceblue;
+      cursor: pointer;
+    }
+
+    .body {
+      background-color: var(--verydarkblue);
+      display: grid;
+      grid-template-areas: 
+      'profile work play study'
+      'profile exercise social self-care';
+    }
+
+    .smallcard {
+      background-color: var(--darkblue); 
+      width: 300px;
+      height: 265px;
+      border-radius: 10px;
+    }
+    .smallcard:hover {
+      background-color: var(--desaturatedblue);
+    }
+
+    .work {
+      grid-area: 'work';
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="largecard">
+    <div class="largecard-over">
+      <div>
+        <img class="pfp" src="./images/image-jeremy.png" />
+        <p class="report-for">Report for</p>
+        <p class="name">Jeremy Robson</p>
+      </div>
+    </div>
+    <div class="largecard-list">
+      <p class="list-element">Daily</p>
+      <p class="list-element">Weekly</p>
+      <p class="list-element">Monthly</p>
+    </div>
+  </div>
+
+  <div class="work smallcard">
+
+  </div>
+  Work
+  5hrs
+  <!-- daily -->
+  Previous - 7hrs
+  <!-- daily -->
+  32hrs
+  <!-- weekly -->
+  Previous - 36hrs
+  <!-- weekly -->
+  103hrs
+  <!-- monthly -->
+  Previous - 128hrs
+  <!-- monthly -->
+
+  Play
+  1hr
+  <!-- daily -->
+  Previous - 2hrs
+  <!-- daily -->
+  10hrs
+  <!-- weekly -->
+  Previous - 8hrs
+  <!-- weekly -->
+  23hrs
+  <!-- monthly -->
+  Previous - 29hrs
+  <!-- monthly -->
+
+  Study
+  0hrs
+  <!-- daily -->
+  Previous - 1hr
+  <!-- daily -->
+  4hrs
+  <!-- weekly -->
+  Previous - 7hrs
+  <!-- weekly -->
+  13hrs
+  <!-- monthly -->
+  Previous - 19hrs
+  <!-- monthly -->
+
+  Exercise
+  1hr
+  <!-- daily -->
+  Previous - 1hr
+  <!-- daily -->
+  4hrs
+  <!-- weekly -->
+  Previous - 5hrs
+  <!-- weekly -->
+  11hrs
+  <!-- monthly -->
+  Previous - 18hrs
+  <!-- monthly -->
+
+  Social
+  1hr
+  <!-- daily -->
+  Previous - 3hrs
+  <!-- daily -->
+  5hrs
+  <!-- weekly -->
+  Previous - 10hrs
+  <!-- weekly -->
+  21hrs
+  <!-- monthly -->
+  Previous - 23hrs
+  <!-- monthly -->
+
+  Self Care
+  0hrs
+  <!-- daily -->
+  Previous - 1hr
+  <!-- daily -->
+  2hrs
+  <!-- weekly -->
+  Previous - 2hrs
+  <!-- weekly -->
+  7hrs
+  <!-- monthly -->
+  Previous - 11hrs
+  <!-- monthly -->
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">ben read.</a>
+    Coded by <a href="#">a ham sandwich.</a>
+  </div>
+</body>
+
+</html>
