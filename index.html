@@ -105,18 +105,38 @@
     }
 
     .smallcard {
-      background-color: var(--darkblue); 
+      background: var(--darkblue); 
       width: 300px;
       height: 265px;
       border-radius: 10px;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
     }
-    .smallcard:hover {
+
+    .smallcard-interior {
+      background-color: var(--darkblue);
+      border-radius: 10px;
+      width: 100%;
+      height: 80%;
+      z-index: 10;
+    }
+    .smallcard-interior:hover {
       background-color: var(--desaturatedblue);
     }
 
-    .work {
-      grid-area: 'work';
+    .smallcard-image-box {
+      background-color: rebeccapurple;
+      width: 100%;
+      height: 30%;
     }
+
+    .work { grid-area: 'work'; }
+    .play { grid-area: 'play'; }
+    .study { grid-area: 'study'; }
+    .study { grid-area: 'exercise'; }
+    .exercise { grid-area: 'social'; }
+    .self-care { grid-area: 'self-care'; }
   </style>
 </head>
 
@@ -137,7 +157,12 @@
   </div>
 
   <div class="work smallcard">
+    <div class="smallcard-image-box">
 
+    </div>
+    <div class="smallcard-interior">
+      a
+    </div>
   </div>
   Work
   5hrs
