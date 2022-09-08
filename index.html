@@ -99,6 +99,13 @@
     .body {
       background-color: var(--verydarkblue);
       display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      background-color: var(--verydarkblue);
+      display: flex;
       flex-direction: row;
     }
 
@@ -209,110 +216,137 @@
       grid-area: 'self-care';
       background-color: hsl(43, 84%, 65%);
     }
+
+    /* 1 width screen */
+    @media (max-width: 700px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .grid-top {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .grid-bottom {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .largecard {
+        margin-bottom: 20px;
+      }
+
+      .smallcard {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 
-<body class="body">
-  <div class="largecard">
-    <div class="largecard-over">
-      <div>
-        <img class="pfp" src="./images/image-jeremy.png" />
-        <p class="report-for">Report for</p>
-        <p class="name">Jeremy Robson</p>
-      </div>
-    </div>
-    <div class="largecard-list">
-      <p class="list-element">Daily</p>
-      <p class="list-element">Weekly</p>
-      <p class="list-element">Monthly</p>
-    </div>
-  </div>
-
-  <div class="full-grid-area">
-    <div class="grid-top">
-      <div class="work smallcard work-colour">
-        <div class="smallcard-image-box">
-          <img src="./images/icon-work.svg" />
-        </div>
-        <div class="smallcard-interior">
-          <div class="smallcard-topbar">
-            <p class="activity-name">Work</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" />
-          </div>
-          <p class="hrs">32hrs</p>
-          <p class="lastweekhrs">Last week - 36hrs</p>
+<body class="main">
+  <div class="main">
+    <div class="largecard">
+      <div class="largecard-over">
+        <div>
+          <img class="pfp" src="./images/image-jeremy.png" />
+          <p class="report-for">Report for</p>
+          <p class="name">Jeremy Robson</p>
         </div>
       </div>
-
-      <div class="play smallcard play-colour">
-        <div class="smallcard-image-box">
-          <img src="./images/icon-play.svg" />
-        </div>
-        <div class="smallcard-interior">
-          <div class="smallcard-topbar">
-            <p class="activity-name">Play</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" />
-          </div>
-          <p class="hrs">32hrs</p>
-          <p class="lastweekhrs">Last week - 36hrs</p>
-        </div>
-      </div>
-
-      <div class="study smallcard study-colour">
-        <div class="smallcard-image-box">
-          <img src="./images/icon-study.svg" />
-        </div>
-        <div class="smallcard-interior">
-          <div class="smallcard-topbar">
-            <p class="activity-name">Study</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" />
-          </div>
-          <p class="hrs">32hrs</p>
-          <p class="lastweekhrs">Last week - 36hrs</p>
-        </div>
+      <div class="largecard-list">
+        <p class="list-element">Daily</p>
+        <p class="list-element">Weekly</p>
+        <p class="list-element">Monthly</p>
       </div>
     </div>
 
-    <div class="grid-bottom">
-      <div class="exercise smallcard exercise-colour">
-        <div class="smallcard-image-box">
-          <img src="./images/icon-exercise.svg" />
-        </div>
-        <div class="smallcard-interior">
-          <div class="smallcard-topbar">
-            <p class="activity-name">Exercise</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" />
+    <div class="full-grid-area">
+      <div class="grid-top">
+        <div class="work smallcard work-colour">
+          <div class="smallcard-image-box">
+            <img src="./images/icon-work.svg" />
           </div>
-          <p class="hrs">32hrs</p>
-          <p class="lastweekhrs">Last week - 36hrs</p>
+          <div class="smallcard-interior">
+            <div class="smallcard-topbar">
+              <p class="activity-name">Work</p>
+              <img class="ellipsis" src="images/icon-ellipsis.svg" />
+            </div>
+            <p class="hrs">32hrs</p>
+            <p class="lastweekhrs">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="play smallcard play-colour">
+          <div class="smallcard-image-box">
+            <img src="./images/icon-play.svg" />
+          </div>
+          <div class="smallcard-interior">
+            <div class="smallcard-topbar">
+              <p class="activity-name">Play</p>
+              <img class="ellipsis" src="images/icon-ellipsis.svg" />
+            </div>
+            <p class="hrs">32hrs</p>
+            <p class="lastweekhrs">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="study smallcard study-colour">
+          <div class="smallcard-image-box">
+            <img src="./images/icon-study.svg" />
+          </div>
+          <div class="smallcard-interior">
+            <div class="smallcard-topbar">
+              <p class="activity-name">Study</p>
+              <img class="ellipsis" src="images/icon-ellipsis.svg" />
+            </div>
+            <p class="hrs">32hrs</p>
+            <p class="lastweekhrs">Last week - 36hrs</p>
+          </div>
         </div>
       </div>
 
-      <div class="social smallcard social-colour">
-        <div class="smallcard-image-box">
-          <img src="./images/icon-social.svg" />
-        </div>
-        <div class="smallcard-interior">
-          <div class="smallcard-topbar">
-            <p class="activity-name">Social</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" />
+      <div class="grid-bottom">
+        <div class="exercise smallcard exercise-colour">
+          <div class="smallcard-image-box">
+            <img src="./images/icon-exercise.svg" />
           </div>
-          <p class="hrs">32hrs</p>
-          <p class="lastweekhrs">Last week - 36hrs</p>
+          <div class="smallcard-interior">
+            <div class="smallcard-topbar">
+              <p class="activity-name">Exercise</p>
+              <img class="ellipsis" src="images/icon-ellipsis.svg" />
+            </div>
+            <p class="hrs">32hrs</p>
+            <p class="lastweekhrs">Last week - 36hrs</p>
+          </div>
         </div>
-      </div>
 
-      <div class="self-care smallcard self-care-colour">
-        <div class="smallcard-image-box">
-          <img src="./images/icon-self-care.svg" />
-        </div>
-        <div class="smallcard-interior">
-          <div class="smallcard-topbar">
-            <p class="activity-name">Self Care</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" />
+        <div class="social smallcard social-colour">
+          <div class="smallcard-image-box">
+            <img src="./images/icon-social.svg" />
           </div>
-          <p class="hrs">32hrs</p>
-          <p class="lastweekhrs">Last week - 36hrs</p>
+          <div class="smallcard-interior">
+            <div class="smallcard-topbar">
+              <p class="activity-name">Social</p>
+              <img class="ellipsis" src="images/icon-ellipsis.svg" />
+            </div>
+            <p class="hrs">32hrs</p>
+            <p class="lastweekhrs">Last week - 36hrs</p>
+          </div>
+        </div>
+
+        <div class="self-care smallcard self-care-colour">
+          <div class="smallcard-image-box">
+            <img src="./images/icon-self-care.svg" />
+          </div>
+          <div class="smallcard-interior">
+            <div class="smallcard-topbar">
+              <p class="activity-name">Self Care</p>
+              <img class="ellipsis" src="images/icon-ellipsis.svg" />
+            </div>
+            <p class="hrs">32hrs</p>
+            <p class="lastweekhrs">Last week - 36hrs</p>
+          </div>
         </div>
       </div>
     </div>
