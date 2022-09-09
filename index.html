@@ -96,17 +96,21 @@
       cursor: pointer;
     }
 
-    .body {
+    html,body {
       background-color: var(--verydarkblue);
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100%
     }
 
     .main {
       background-color: var(--verydarkblue);
       display: flex;
       flex-direction: row;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     .full-grid-area {
@@ -133,6 +137,13 @@
       border-radius: 10px;
       margin-left: 20px;
       margin-bottom: 20px;
+      display: grid;
+      isolation: isolate;
+    }
+
+    .smallcard > * {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
     }
 
     .smallcard-interior {
@@ -141,6 +152,7 @@
       width: calc(100% - 60px);
       height: calc(80% - 60px);
       padding: 30px;
+      margin-top: 50px;
     }
     .smallcard-interior:hover {
       background-color: var(--desaturatedblue);
@@ -149,9 +161,10 @@
 
     .smallcard-image-box {
       width: 100%;
-      height: 20%;
+      height: 30%;
       display: flex;
       flex-direction: row-reverse;
+      z-index: -1;
     }
 
     .smallcard-topbar {
@@ -173,6 +186,7 @@
       font-size: 20px;
       font-family: 'Rubik', sans-serif;
       color: aliceblue;
+      margin-bottom: 20px;
     }
 
     .hrs {
@@ -217,7 +231,7 @@
       background-color: hsl(43, 84%, 65%);
     }
 
-    /* 1 width screen */
+    /* Small screen */
     @media (max-width: 700px) {
       .main {
         flex-direction: column;
@@ -244,7 +258,7 @@
   </style>
 </head>
 
-<body class="main">
+<body>
   <div class="main">
     <div class="largecard">
       <div class="largecard-over">
@@ -265,7 +279,7 @@
       <div class="grid-top">
         <div class="work smallcard work-colour">
           <div class="smallcard-image-box">
-            <img src="./images/icon-work.svg" />
+            <img class="height: 20%" src="./images/icon-work.svg" />
           </div>
           <div class="smallcard-interior">
             <div class="smallcard-topbar">
@@ -286,8 +300,8 @@
               <p class="activity-name">Play</p>
               <img class="ellipsis" src="images/icon-ellipsis.svg" />
             </div>
-            <p class="hrs">32hrs</p>
-            <p class="lastweekhrs">Last week - 36hrs</p>
+            <p class="hrs">10hrs</p>
+            <p class="lastweekhrs">Last week - 8hrs</p>
           </div>
         </div>
 
@@ -300,8 +314,8 @@
               <p class="activity-name">Study</p>
               <img class="ellipsis" src="images/icon-ellipsis.svg" />
             </div>
-            <p class="hrs">32hrs</p>
-            <p class="lastweekhrs">Last week - 36hrs</p>
+            <p class="hrs">4hrs</p>
+            <p class="lastweekhrs">Last week - 7hrs</p>
           </div>
         </div>
       </div>
@@ -316,8 +330,8 @@
               <p class="activity-name">Exercise</p>
               <img class="ellipsis" src="images/icon-ellipsis.svg" />
             </div>
-            <p class="hrs">32hrs</p>
-            <p class="lastweekhrs">Last week - 36hrs</p>
+            <p class="hrs">4hrs</p>
+            <p class="lastweekhrs">Last week - 5hrs</p>
           </div>
         </div>
 
@@ -330,8 +344,8 @@
               <p class="activity-name">Social</p>
               <img class="ellipsis" src="images/icon-ellipsis.svg" />
             </div>
-            <p class="hrs">32hrs</p>
-            <p class="lastweekhrs">Last week - 36hrs</p>
+            <p class="hrs">5hrs</p>
+            <p class="lastweekhrs">Last week - 10hrs</p>
           </div>
         </div>
 
@@ -344,8 +358,8 @@
               <p class="activity-name">Self Care</p>
               <img class="ellipsis" src="images/icon-ellipsis.svg" />
             </div>
-            <p class="hrs">32hrs</p>
-            <p class="lastweekhrs">Last week - 36hrs</p>
+            <p class="hrs">2hrs</p>
+            <p class="lastweekhrs">Last week - 2hrs</p>
           </div>
         </div>
       </div>
